@@ -43,7 +43,7 @@
         .right {
             justify-content: flex-end
 */
-        }
+        
 
         /*
   
@@ -53,7 +53,37 @@
    a:hover {
        font-family: fantasy}
 */
-
+    form p {
+            display:flex;
+        }        
+        form label {
+            flex-basis: 33%;
+        }
+        form input, textarea, select {
+            flex: 1;
+            margin: 0 1em;
+            border-radius: 5px;
+        }
+        form select {
+            text-align: center;
+        }
+/*
+        main {
+            display:flex;
+            align-items: center;
+            flex:1;
+            justify-content: center;
+            flex-direction: column;
+        }
+*/
+        .centered {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            flex-direction: column
+        }
+     
     </style>
 </head>
 
@@ -75,12 +105,17 @@
         </nav>
     </header>
 
-    <main>
+    <main class="centered">
         <h1>It's time to create a dog, dog!</h1>
         <form action="results.html">
+<!--            <div class="centered">-->
             <p>
                 <label for="name">Name of Dog</label>
                 <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label for="jaime">Jaime of Dog</label>
+                <input type="password" name="jaime" id="jaime">
             </p>
             <p>
                 <label for="legs">Number of Legs</label>
@@ -94,21 +129,22 @@
                 </select>
             </p>
            <div class="radio-buttons">
-            <label for="color">Color of Dog</label>
-            <input type="radio" name="color" value="Brown">Brown
-            <input type="radio" name="color" value="NotBrown"> Not Brown
+            <label>Color of Dog</label>
+            <input type="radio" name="nasty" value="Brown">Brown
+            <input type="radio" name="nasty" value="NotBrown"> Not Brown
             </div>
             <p>
             <label for="personality">Describe your dog's personality in a brief 8-paragraph essay.</label>
-            <textarea name="personality" id="personality" rows="4" cols="50"></textarea>
+            
             </p>
-
+<textarea name="personality" id="personality" rows="20" cols="50"></textarea>
+                
 <p>
             <label></label>
             <input type="submit" value="Create Your Dog">
             <input type="reset" value="Throw Your Dog in the Trash and Try Again">
             </p>
-
+<!--            </div>-->
 
 
 
